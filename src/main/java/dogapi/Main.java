@@ -20,12 +20,14 @@ public class Main {
      * provided fetcher.
      * @param breed the name of the dog breed
      * @param breedFetcher the breedFetcher to use
-     * @return the number of sub breeds. Zero should be returned if there are no sub breeds
-     * returned by the fetcher
+     * @return the number of sub breeds, or 0 if none exist or if the breed is invalid
      */
     public static int getNumberOfSubBreeds(String breed, BreedFetcher breedFetcher) {
-        // TODO Task 3 implement this code so that it is entirely consistent with its provided documentation.
-        // return statement included so that the starter code can compile and run.
-        return -1;
+        try {
+            List<String> subBreeds = breedFetcher.getSubBreeds(breed);
+            return subBreeds.size();
+        } catch (BreedFetcher.BreedNotFoundException e) {
+            return 0;
+        }
     }
 }
