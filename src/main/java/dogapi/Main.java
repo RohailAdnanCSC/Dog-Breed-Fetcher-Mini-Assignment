@@ -4,6 +4,9 @@ import java.util.List;
 
 public class Main {
 
+    // Dummy line for PR purposes
+    private static final int TEST_PR_LINE = 0;
+
     public static void main(String[] args) {
         String breed = "hound";
         BreedFetcher breedFetcher = new CachingBreedFetcher(new BreedFetcherForLocalTesting());
