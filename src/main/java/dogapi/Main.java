@@ -20,7 +20,8 @@ public class Main {
      * provided fetcher.
      * @param breed the name of the dog breed
      * @param breedFetcher the breedFetcher to use
-     * @return the number of sub breeds, or 0 if none exist or if the breed is invalid
+     * @return the number of sub breeds. Zero should be returned if there are no sub breeds
+     * returned by the fetcher
      */
     public static int getNumberOfSubBreeds(String breed, BreedFetcher breedFetcher) {
         try {
